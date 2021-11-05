@@ -47,10 +47,10 @@ const News = ({simplified}) => {
             {cryptoNews.value.length === 0 ? noNews() :cryptoNews.value.map((news,i)=>(
                 <Col xs={24} sm={12} lg={8} key={i}>
                     <Card hoverable className='news-card'>
-                        <a href={news.url} target="_blank" rel="noreferrer">
+                        <a href={news.url} target="_blank" >
                             <div className="news-image-container">
                                 <Title className="news-title" level={4}>{news.name}</Title>
-                                <img style={{'maxWidth':'200px','maxHeight':'100px'}} src={news?.image?.thumbnail?.contentUrl || demoImage} alt="" />
+                                <img style={{'maxWidth':'200px','maxHeight':'100px'}} src={news?.image?.thumbnail?.contentUrl || demoImage} alt="demo" />
                             </div>
                             <p>
                                 {news.description > 100 ? `${news.description.substring(0,100)}...`: news.description}
