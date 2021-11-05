@@ -44,7 +44,7 @@ const News = ({simplified}) => {
                 </Col>
             )}
 
-            {cryptoNews.value.length == 0 ? noNews() :cryptoNews.value.map((news,i)=>(
+            {cryptoNews.value.length === 0 ? noNews() :cryptoNews.value.map((news,i)=>(
                 <Col xs={24} sm={12} lg={8} key={i}>
                     <Card hoverable className='news-card'>
                         <a href={news.url} target="_blank" rel="noreferrer">
